@@ -1,0 +1,11 @@
+.*
+!.gitignore
+
+#Configurações do projeto para o usuário.
+*.pro.user
+
+**Makefile
+**/build/
+
+*Makefile
+

@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/icons/note_add.svg</file>
+        <file>resources/icons/previous.svg</file>
+        <file>resources/icons/next.svg</file>
+        <file>resources/icons/back.svg</file>
+        <file>resources/icons/delete.svg</file>
+    </qresource>
+</RCC>
