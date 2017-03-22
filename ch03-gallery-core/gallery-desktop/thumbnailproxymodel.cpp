@@ -4,6 +4,13 @@
 
 const unsigned int THUMBNAIL_SIZE = 350;
 
+ThumbnailProxyModel::ThumbnailProxyModel( QObject* parent ) :
+    QIdentityProxyModel( parent ),
+    mThumbnails()
+{
+
+}
+
 void ThumbnailProxyModel::generateThumbnails( const QModelIndex& startIndex, int count ) {
 
     if ( !startIndex.isValid() ) {

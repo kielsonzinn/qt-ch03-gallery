@@ -4,8 +4,8 @@
 #include <QMainWindow>
 #include <QStackedWidget>
 
-#include "picturewidget.h"
-#include "gallerywidget.h"
+class GalleryWidget;
+class PictureWidget;
 
 namespace Ui {
     class MainWindow;
