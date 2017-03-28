@@ -20,6 +20,7 @@ public:
     AlbumModel( QObject* parent = NULL );
 
     QModelIndex addAlbum( const Album& album );
+    Q_INVOKABLE void addAlbumFromName( const QString& name );
     int rowCount( const QModelIndex& parent = QModelIndex() ) const override;
     QVariant data( const QModelIndex& index, int role = Qt::DisplayRole ) const override;
     bool setData( const QModelIndex& index, const QVariant& value, int role ) override;

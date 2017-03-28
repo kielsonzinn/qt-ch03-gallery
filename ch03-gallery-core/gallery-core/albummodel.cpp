@@ -72,6 +72,10 @@ QModelIndex AlbumModel::addAlbum( const Album& album ) {
 
 }
 
+void AlbumModel::addAlbumFromName( const QString& name ) {
+    addAlbum( Album( name ) );
+}
+
 bool AlbumModel::setData( const QModelIndex& index, const QVariant& value, int role ) {
 
     if ( !isIndexValid( index ) || role != Roles::NameRole) {

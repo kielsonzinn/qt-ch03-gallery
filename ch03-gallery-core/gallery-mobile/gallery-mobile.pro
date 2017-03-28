@@ -4,7 +4,11 @@ QT += qml quick sql svg
 
 CONFIG += c++11
 
-SOURCES += main.cpp
+HEADERS += \
+    pictureimageprovider.h
+
+SOURCES += main.cpp \
+    pictureimageprovider.cpp
 
 RESOURCES += \
     gallery.qrc
@@ -27,8 +31,12 @@ MOC_DIR = $$DESTDIR/.moc
 RCC_DIR = $$DESTDIR/.qrc
 UI_DIR = $$DESTDIR/.u
 
-win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../gallery-core/$$DESTDIR/ -lgallery-core
-else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../gallery-core/$$DESTDIR/ -lgallery-core
-else:unix: LIBS += -L$$PWD/../gallery-core/$$DESTDIR/ -lgallery-core
+#{ gallery-core
 
-INCLUDEPATH += $$PWD/../gallery-core/$$DESTDIR
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../gallery-core/$$DESTDIR -lgallery-core
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../gallery-core/$$DESTDIR -lgallery-core
+else:unix: LIBS += -L$$PWD/../gallery-core/$$DESTDIR -lgallery-core
+
+INCLUDEPATH += $$PWD/../gallery-core
+
+#} gallery-core

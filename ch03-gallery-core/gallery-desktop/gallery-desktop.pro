@@ -46,11 +46,10 @@ UI_DIR = $$DESTDIR/.u
 
 #{ gallery-core
 
-win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../gallery-core/build/debug/release/ -lgallery-core
-else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../gallery-core/build/debug/debug/ -lgallery-core
-else:unix: LIBS += -L$$PWD/../gallery-core/build/debug/ -lgallery-core
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../gallery-core/$$DESTDIR -lgallery-core
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../gallery-core/$$DESTDIR -lgallery-core
+else:unix: LIBS += -L$$PWD/../gallery-core/$$DESTDIR -lgallery-core
 
 INCLUDEPATH += $$PWD/../gallery-core
-DEPENDPATH += $$PWD/../gallery-core
 
 #} gallery-core
